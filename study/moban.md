@@ -561,7 +561,7 @@ void solve(){
 ```c++
 typedef pair<int,int> PII;
 const int N=1010;
-const int dir[][2]={{1,0},{-1,0},{0,1},{0,-1}};
+const int dir[][2]={1,0,-1,0,0,1,0,-1};
 int dist[N][N];
 char g[N][N];
 int n,m;
