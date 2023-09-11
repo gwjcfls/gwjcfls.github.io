@@ -508,7 +508,7 @@ void solve(){
 **迷宫问题**
 
 ```c++
-const int dir[][2]={{1,0},{-1,0},{0,1},{0,-1}};
+const int dir[][2]={1,0,-1,0,0,1,0,-1};
 int g[N][N];
 PII pre[N][N];//存储路径
 int n;
@@ -4352,7 +4352,7 @@ int main(){
 using namespace std;
 typedef pair<int,int> PII;
 const int N=11,M=400;
-const int dir[][2]={{1,0},{-1,0},{0,1},{0,-1}};
+const int dir[][2]={1,0,-1,0,0,1,0,-1};
 int h[N*N],e[M],ne[M],w[M],idx;
 set<PII> edge;
 int g[N][N],key[N*N];
@@ -6870,7 +6870,7 @@ const int N=110;
 bool g[N][N],st[N][N];
 PII match[N][N];
 int n,m;
-const int dir[][2]={{1,0},{-1,0},{0,1},{0,-1}};
+const int dir[][2]={1,0,-1,0,0,1,0,-1};
 bool find(int x,int y){
     for(int k=0;k<4;k++){
         int xx=x+dir[k][0];
