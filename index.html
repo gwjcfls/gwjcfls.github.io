@@ -7,7 +7,7 @@
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -235,7 +235,7 @@ mjx-container { break-inside: avoid; }
     --main-color-11: #532476;
 
       /* 主题色月青 */
-    /*--side-bar-bg-color: #F2FEFE;
+    /* --side-bar-bg-color: #F2FEFE;
     --control-text-color: #777;
     --select-text-bg-color: #b1f9f7;
     --active-file-text-color: #50f4f0;
@@ -257,8 +257,7 @@ mjx-container { break-inside: avoid; }
     --main-color-8: #0ededa;
     --main-color-9: #0dc8c4;
     --main-color-10: #0cb4b0;
-    --main-color-11: #0BABAB; 
-    */
+    --main-color-11: #0BABAB; */
   }
 
 /* 字体引入 */
@@ -398,7 +397,8 @@ h1 {
     margin: 2.8rem auto 2.2rem;
     color: var(--main-color-11);
   }
- h1 span {
+
+/* h1 span {
     display: inline-block;
     border-bottom: 2px solid var(--main-color-9);
     padding: 0 1rem;
@@ -411,7 +411,7 @@ h1:after {
     width: 200px;
     height: 2px;
     border-bottom: 2px solid var(--main-color-9);
-  } 
+  } */
 
 /* 二级标题 */
 
@@ -427,11 +427,11 @@ h2 {
 
 h2 span {
     display: inline-block;
-    border-bottom: 5px solid var(--main-color-9);
+    border-bottom: 5px double var(--main-color-9);
     /* border-radius: 2px; */
     padding: .2rem .3rem;
   }
-  
+
 /* 三级标题 */
 
 h3 {
@@ -444,13 +444,11 @@ h3 {
     color: var(--font-color-1);
   } 
 
-
 #write h3::before {
-  content: '>';
+  content: '> ';
   color: var(--main-color-9);
-  /*margin-left: -5.9rem; */
-} 
-
+  /* margin-left: -5.9rem; */
+}
 
 #write h3 {
   margin: 1.4rem auto 1rem;
@@ -462,7 +460,6 @@ h3 {
   padding: .2rem .1rem;
   color: var(--font-color-1);
 }
-
 
 h3.md-focus:before {
   content: 'h3' !important;
@@ -485,14 +482,13 @@ h4.md-focus:before {
   content: 'h4' !important;
 }
 
-#write>h2.md-focus:before,
 #write>h3.md-focus:before,
 #write>h4.md-focus:before {
     width: auto;
     height: auto;
     background-color: var(--main-color-1);
     color: var(--main-color-9);
-}
+  }
 
 #write h5::before,
 #write h6::before {
@@ -510,11 +506,10 @@ h4.md-focus:before {
 
 /* 五级标题 */
   
-/*#write h5::before {
+#write h5::before {
     content: 'H5';
     top: 0.18rem;
   }
-  */
 
 #write h5 {
     /* margin-left: 2em; */
@@ -525,11 +520,11 @@ h4.md-focus:before {
 
 /* 六级标题 */
 
-/*#write h6::before {
+#write h6::before {
     content: 'H6';
     top: 0.18rem;
   }
-*/
+
 #write h6 {
     /* margin-left: 2.5em; */
     font-size: 1rem;
@@ -549,10 +544,9 @@ blockquote {
     font-family: 'HelveticaN', Arial, "kaiti","pingfangSC light", "microsoft yahei" !important;
   }
 
-
   /*月青的引用*/
- /* blockquote p:first-of-type::before{
-    content: "?";
+  /* blockquote p:first-of-type::before{
+    content: "☽";
     position: relative;
     font-size: 3em;
     padding: 0 .5rem;
@@ -560,17 +554,17 @@ blockquote {
     font-family: Arial, serif;
     line-height: 1em;
     font-weight: 700;
-  } 
+  } */
 
- blockquote {
+/* blockquote {
     border: 2px double var(--main-color-10); 
     border-radius: 6px;
     margin: 3rem auto;
     padding: 10px 15px 26px;
     color: var(--blockquote-font-color) !important;
     font-family: 'HelveticaN', Arial, "kaiti","pingfangSC light", "microsoft yahei" !important;
-  } 
-*/
+  } */
+
 /* 列表 */
 
 #write ol,
@@ -768,7 +762,6 @@ tt{
 /* 代码块外框 */
 
 #write .md-fences {
-/*
   border: 1px solid #7a7a7a;
   -webkit-font-smoothing: initial;
   padding: 3px 5px;
@@ -778,36 +771,27 @@ tt{
   font-size: 0.9rem;
   word-wrap: normal;
   font-style: normal;
-  */
-  border: 1px solid #e7eaed;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-  padding: 0;
-  padding: 2px 4px 0px 4px;
-  font-size: 0.9em;
 }
-
-
 
 /* #write.enable-diagrams>[mermaid-type=gantt].md-fences:not(.md-focus) {
   border: none !important;
  } */
 
-/*.code-tooltip .ty-input:focus, input:focus {
+.code-tooltip .ty-input:focus, input:focus {
     outline: 0;
     box-shadow: none;
     border-color: var(--main-color-7);
     font-size: 14px;
     color:#f22f27
   }    
-*/
+
 /* 
 *  代码块高亮主题
 *  本主题主要参考了 material-ocean
 *  更多其它代码块主题请参考https://codemirror.net/
 *  也可在https://github.com/codemirror/codemirror下的theme文件查看不同主题的源码
 */
-/*
+
 .cm-s-inner.CodeMirror { 
     background: transparent; 
     color: #8F93A2; 
@@ -949,16 +933,6 @@ tt{
 #write .CodeMirror-cursors .CodeMirror-cursor {
       border-left: 2px solid var(--main-color-6);
     }
-*/
-/* Port of TextMate's Blackboard theme */
-
-/*
-  Name:       lucario
-  Author:     Raphael Amorim
-
-  Original Lucario color scheme (https://github.com/raphamorim/lucario)
-*/
-
 
 /* 行内公式 */
 
@@ -1152,10 +1126,25 @@ pre.md-meta-block:active {
 }
 
 
-
-</style><title>tools</title>
+</style><title>welcome</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><strong><a href='https://go.microsoft.com/fwlink/?linkid=2109047&amp;Channel=Stable&amp;language=zh-cn&amp;brand=M100_.%'><span>edge</span></a></strong></p><p><strong><a href='https://exlg.oss-cn-shanghai.aliyuncs.com/latest/dist/extend-luogu.min.user.js'><span>exlg</span></a></strong></p><p><strong><a href='https://greasyfork.org/scripts/465777-codeforces-better/code/Codeforces Better!.user.js'><span>codeforces better!</span></a></strong></p><p><strong><a href='https://greasyfork.org/scripts/471106-atcoder-better/code/Atcoder Better!.user.js'><span>atcoder better!</span></a></strong></p><p><strong><a href='/clashverge.exe'><span>clashverge.exe</span></a><span> </span></strong></p><p><strong><a href='https://cowtransfer.com/s/25a368e7d2a54f'><span>todesk.zip</span></a><span>[pnko09]</span></strong></p><p><span> </span><strong><span>tampermonkey </span><a href='https://cowtransfer.com/s/5aa46a1217e54c'><span>edge</span></a><span>[dc446y] </span><a href='https://cowtransfer.com/s/3bdfe81b02c945'><span>chrome</span></a><span>[p6kenl]</span></strong></p><p><strong><a href='https://gwjcfls.top/choosename/Main.exe'><span>namechooser(V1.3)</span></a></strong></p><p><span>https://sub.kccikk.xyz/api/v1/client/subscribe?token=b03b3118c47946334f27d66ca5763768</span></p><p><span></span></p><p>&nbsp;</p></div></div>
+<div id='write'  class=''>
+
+<p><em><strong><a href='https://fd.gwjcfls.top'><span>反向代理</span>      <a href='https://uploader.gwjcfls.top'><span>云盘</span></a></strong></em></p>
+
+<hr>
+
+<p><span> </span><strong><a href=''><span>message</span></a></strong></p>
+
+<p><span> </span><strong><a href='tools.html'><span>tools</span></a></strong><span> </span></p>
+
+<p><span> </span><strong><a href='website.html'><span>website</span></a></strong><span> </span></p>
+
+<p><span> </span><strong><a href='game.html'><span>game</span></a></strong><span> </span></p>
+
+<p><span> </span><strong><a href='study.html'><span>study</span></a></strong><span> </span></p>
+
+<h4 id='一些金玉良言'><span>一些金玉良言：</span></h4><ol start='' ><li><p><em><strong><span>人生如戏，全靠演技</span></strong></em></p></li><li><p><em><strong><span>打表法就是将题目中需要的答案集合提前算出来，存到代码里，根据题目所需取答案，这种方法通常只需要将程序挂着，在表打完后进行加工，最终取答案程序时间复杂度为 O(1)，空间复杂度为 O(n) (n为答案规模)；</span></strong></em><span> </span><em><strong><span>——沃兹·基朔德</span></strong></em></p><p>&nbsp;</p><p>&nbsp;</p><p><a href='https://badges.toozhao.com/stats/01H9TA3DZT32FFMP7CQR7FZ6MY' title='Get your own page views count badge on badges.toozhao.com'><img src="https://badges.toozhao.com/badges/01H9TA3DZT32FFMP7CQR7FZ6MY/orange.svg" referrerpolicy="no-referrer" alt="shadow"></a></p></li></ol></div></div>
 </body>
 </html>
